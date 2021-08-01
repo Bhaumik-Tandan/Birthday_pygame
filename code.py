@@ -1,8 +1,21 @@
 import pygame as p
 import os
 import random as r
-p.init()
-d=p.display.set_mode((540,570),p.FULLSCREEN)#display width
+import json
+p.init()  
+###################Json settings
+f = open('settings.json',)
+d = json.load(f)
+ww=d["window width"]
+wh=d["windows height"]
+fs=d["full screen"]
+aud=d["audio"]
+f.close()
+########################################
+if fs:
+    d=p.display.set_mode((ww,wh),p.FULLSCREEN)#display width
+else:
+    d=p.display.set_mode((ww,wh))
 #quit image selection
 qu=[]
 for i in os.listdir("asset\\quit_photo"):# find the list of all files in the folder
@@ -15,7 +28,8 @@ for i in os.listdir("asset\\audio"):# find the list of all files in the folder
     qu.append(i)
 lu=r.randrange(len(qu))#select random audio
 p.mixer.music.load(os.path.join(os.getcwd(),"asset\\audio\\"+qu[lu]))#audio
-p.mixer.music.play(-1)
+if aud:
+    p.mixer.music.play(-1)
 #all photos of snake
 pi=[]
 for i in os.listdir("asset\\snake_photo"):
@@ -28,7 +42,7 @@ def fun(m):
         a=p.transform.scale(pic,(d.get_size()[0],d.get_size()[1]))
         d.blit(a,(0,0))
         #quit text
-        d.blit(p.font.SysFont("bahnschrift",25).render(m+"! Press C-Play Again or Q-Quit",True,(255,0,0)), [d.get_size()[0]/4,d.get_size()[1]/2])
+        d.blit(p.font.SysFont("bahnschrift",20).render(m+"! Press C-Play Again or Q-Quit",True,(255,0,0)), [d.get_size()[0]/15,d.get_size()[1]/2])
         p.display.update() 
         for event in p.event.get():
                if event.type == p.KEYDOWN:
