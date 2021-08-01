@@ -5,8 +5,6 @@
     "window width":18,
     "windows height":19,
     "happy birthday banner height":2},
-    "full screen":true,
-    "audio":true,
     "score":{
         "font size":20,
         "color":"red",
@@ -18,6 +16,8 @@
         "font color":"green",
         "type":"bahnschrift"
     },
+    "full screen":true,
+    "audio":true,
     "background color":"green",
     "speed":5,
     "speed increment":0.2
