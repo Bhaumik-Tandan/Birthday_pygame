@@ -6,7 +6,7 @@ Customizable Birthday snake game
 
 ## Customisation
 
->>You can add and remove audio in the audio folder in the asset directory
+You can add and remove audio in the audio folder in the asset directory
 
 >>Add photos that you want to be displayed in snake in the snake_photo folder
 
