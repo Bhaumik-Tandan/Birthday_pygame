@@ -6,7 +6,7 @@
     "windows height":19,
     "happy birthday banner height":2},
     "full screen":true,
-    "audio":false,
+    "audio":true,
     "score":{
         "font size":20,
         "color":"red",
