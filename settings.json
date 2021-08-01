@@ -1,6 +1,24 @@
 {
-    "window width":540,
-    "windows height":570,
-    "full screen":false,
-    "audio":false
+    "size":{
+    "block width":30,
+    "block height":30,
+    "window width":18,
+    "windows height":19,
+    "happy birthday banner height":2},
+    "full screen":true,
+    "audio":false,
+    "score":{
+        "font size":20,
+        "color":"red",
+        "type":"bahnschrift"
+    },
+    "msg":
+    {
+        "font size":20,
+        "font color":"green",
+        "type":"bahnschrift"
+    },
+    "background color":"green",
+    "speed":5,
+    "speed increment":0.2
 }
