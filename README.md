@@ -1,7 +1,6 @@
 
-# Project Title
-
-Customizable Birthday snake game
+# Customizable Birthday snake game
+A customisable game developed using pygames library in python
 
 ## Sample Gameplay
 
@@ -142,8 +141,14 @@ No the location\name of the folder must not be changed
 No it is not recomended
 
 
-  
 ## 🛠 Skills
 Python, pygames, os, json...
 
+## Future Ideas
+
+We can use image processing and then make a collage of images based on the images stored in the birthday folder
+
+We can include the feature so that the user can change the settings.json using GUI
+
+We can add multiplayer feature using socket library in python
   
