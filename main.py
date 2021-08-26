@@ -9,8 +9,8 @@ if fs:
     d=p.display.set_mode((ww,wh),p.FULLSCREEN)#display width
 else:
     d=p.display.set_mode((ww,wh))
-a=p.image.load(os.path.join(os.getcwd(),"asset\\quit_photo\\"+qi))#quit image
-p.mixer.music.load(os.path.join(os.getcwd(),"asset\\audio\\"+qa))#audio
+a=p.image.load(os.path.join(os.getcwd(),"asset","quit_photo",qi))#quit image
+p.mixer.music.load(os.path.join(os.getcwd(),"asset","audio",qa))#audio
 if aud:
     p.mixer.music.play(-1)
 p.display.set_icon(a)#icon photo
@@ -79,10 +79,10 @@ def gameLoop():
             return 0
         d.fill("green")
         qu=[]
-        for i in os.listdir("asset\\birthday_photo"):# happy birthday photo
+        for i in os.listdir(os.path.join("asset","birthday_photo")):# happy birthday photo
             qu.append(i)
         lu=r.randrange(len(qu))#select random audio
-        b=p.image.load(os.path.join(os.getcwd(),"asset\\birthday_photo\\"+qu[lu]))#the birthday imae keep on blinking
+        b=p.image.load(os.path.join(os.getcwd(),"asset","birthday_photo",qu[lu]))#the birthday imae keep on blinking
         b=p.transform.scale(b,(d.get_size()[0],block_width*hbb))
         d.blit(b,(0,0))
         f=0
