@@ -5,7 +5,7 @@ from json_get_data import *
 from files_get_data import *
 p.init()  
 #audio
-if fs:
+if full_screen:
     d=p.display.set_mode((ww,wh),p.FULLSCREEN)#display width
 else:
     d=p.display.set_mode((ww,wh))
